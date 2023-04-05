@@ -10,6 +10,8 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+export EDITOR="nvim"
+export TERM="foot"
 
 ##------------------- ENABLE COLORS -----------------------##
 
@@ -21,6 +23,8 @@ autoload -Uz promptinit
 promptinit
 autoload -U compinit && compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+setopt autocd
+cdpath=($HOME $HOME/.config)
 
 ##------------------- ZSH HISTORY -----------------------##
 
@@ -71,30 +75,39 @@ source ~/.zsh/themes/asif@akonjee.zsh-theme
 ##------------------- ALIAS -----------------------##
 alias add='sudo pacman -S'
 alias remove='sudo pacman -R'
+alias premove='paru -Rnss'
 alias clean='sudo pacman -Rns'
-alias up='sudo pacman -Sy'
-alias up='sudo pacman -Sy'
-alias upg='sudo pacman -Syyu'
+alias upm='sudo pacman -Sy'
+alias up='sudo pacman -Syyu'
 alias search='pacman -Q'
-alias ls='exa -a -G --icons --color=always' # my preferred listing
-alias la='exa -al -G --icons --color=always'  # all files and dirs
-alias ll='exa -l -G --icons --color=always'  # long format
+alias ls='exa -a --grid --icons --color=always' # my preferred listing
+alias la='exa -al --grid --icons --color=always'  # all files and dirs
+alias ll='exa -l --grid --icons --color=always'  # long format
 alias gcl='git clone'
+alias ga='git add -u'
+alias gc='git commit -m'
+alias gp='git push'
+alias gs='git status'
 alias ..='cd ..'
 alias pd='pwd'
 alias cat='bat --theme ansi'
-alias rfm='ranger'
-alias zconf='micro .zshrc'
-alias bconf='micro .bashrc'
+alias rf='ranger'
+alias zconf='nvim .zshrc'
+alias bconf='nvim .bashrc'
 alias battery='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias reboot='systemctl reboot'
 alias poweroff='systemctl poweroff'
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-alias mirrorall-'sudo curl -o /etc/pacman.d/mirrorlist https://archlinux.org/mirrorlist/all/'
+alias mirrorall='sudo curl -o /etc/pacman.d/mirrorlist https://archlinux.org/mirrorlist/all/'
+alias vim='nvim'
+alias edit="sudoedit"
+alias zrc="source .zshrc"
+alias ctl="hyprctl"
+alias lsi="lsix"
+alias img="img2sixel -w 1248 -h 702"
 
 ##------------------- ZSH HOME DECOR --------------------##
 
-figlet KDE Plasma
-neofetch
+nitch
