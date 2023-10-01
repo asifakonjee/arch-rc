@@ -80,6 +80,7 @@ alias clean='sudo pacman -Rns'
 alias upm='sudo pacman -Sy'
 alias up='sudo pacman -Syyu'
 alias search='pacman -Q'
+alias cclean='sudo paccache -rk 1'
 alias ls='exa -a --grid --icons --color=always' # my preferred listing
 alias la='exa -al --grid --icons --color=always'  # all files and dirs
 alias ll='exa -l --grid --icons --color=always'  # long format
@@ -99,6 +100,8 @@ alias reboot='systemctl reboot'
 alias poweroff='systemctl poweroff'
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
+alias srb='source .bashrc'
+alias srz='source .zshrc'
 alias grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias mirrorall='sudo curl -o /etc/pacman.d/mirrorlist https://archlinux.org/mirrorlist/all/'
 alias vim='nvim'
@@ -110,4 +113,5 @@ alias img="img2sixel -w 1248 -h 702"
 
 ##------------------- ZSH HOME DECOR --------------------##
 
-nitch
+#nitch
+#neofetch
