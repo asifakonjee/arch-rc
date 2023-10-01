@@ -56,6 +56,7 @@ alias upm='sudo pacman -Sy'
 alias up='sudo pacman -Syyu'
 alias search='pacman -Ss'
 alias list='pacman -Qq'
+alias cclean='sudo paccache -rk 1'
 alias ls='exa -a -G --icons --color=always --group-directories-first' # my preferred listing
 alias la='exa -al -G --icons --color=always --group-directories-first'  # all files and dirs
 alias ll='exa -l -G --icons --color=always --group-directories-first'  # long format
@@ -75,6 +76,8 @@ alias reboot='systemctl reboot'
 alias poweroff='systemctl poweroff'
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
+alias srb='source .bashrc'
+alias srz='source .zshrc'
 alias grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias vim="nvim"
 alias edit="sudoedit"
