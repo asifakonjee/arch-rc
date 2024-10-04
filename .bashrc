@@ -12,9 +12,9 @@
 [[ $- != *i* ]] && return
 
 #export MOZ_ENABLE_WAYLAND=1
-export EDITOR="nvim"
+export EDITOR="micro"
 export CDPATH=.:$HOME:$HOME/.config/
-export TERM="foot"
+export TERM="konsole"
 
 ########
 #ALCI
@@ -54,23 +54,23 @@ alias premove='paru -Rnss'
 alias clean='sudo pacman -Rns'
 alias upm='sudo pacman -Sy'
 alias up='sudo pacman -Syyu'
-alias search='pacman -Ss'
-alias list='pacman -Qq'
+alias search='pacman -Q'
 alias cclean='sudo paccache -rk 1'
-alias ls='exa -a -G --icons --color=always --group-directories-first' # my preferred listing
-alias la='exa -al -G --icons --color=always --group-directories-first'  # all files and dirs
-alias ll='exa -l -G --icons --color=always --group-directories-first'  # long format
-alias ..='cd ..'
-alias pd='pwd'
+alias dclean='sudo pacman -Sc --noconfirm'
+alias ls='exa -a --grid --icons --color=always' # my preferred listing
+alias la='exa -al --grid --icons --color=always'  # all files and dirs
+alias ll='exa -l --grid --icons --color=always'  # long format
 alias gcl='git clone'
-alias ga='git add -u'
+alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push'
 alias gs='git status'
+alias ..='cd ..'
+alias pd='pwd'
 alias cat='bat --theme ansi'
-alias rf='ranger'
-alias bconf='micro .bashrc'
+alias fm='yazi'
 alias zconf='micro .zshrc'
+alias bconf='micro .bashrc'
 alias battery='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias reboot='systemctl reboot'
 alias poweroff='systemctl poweroff'
@@ -79,16 +79,16 @@ alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias srb='source .bashrc'
 alias srz='source .zshrc'
 alias grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-alias vim="nvim"
+alias mirrorall='sudo curl -o /etc/pacman.d/mirrorlist https://archlinux.org/mirrorlist/all/'
 alias edit="sudoedit"
-alias brc="source .bashrc"
 alias ctl="hyprctl"
 alias lsi="lsix"
 alias img="img2sixel -w 1248 -h 702"
-
+alias fonts='sudo fc-cache -fv'
+alias fetch='fastfetch'
 
 ##------------------- BASH HOME DECOR --------------------##
 
-nitch
+#nitch
 #figlet Hyprland
 #neofetch

@@ -10,8 +10,9 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-export EDITOR="nvim"
-export TERM="foot"
+export EDITOR="micro"
+export TERM="konsole"
+export BROWSER="firefox"
 
 ##------------------- ENABLE COLORS -----------------------##
 
@@ -81,20 +82,21 @@ alias upm='sudo pacman -Sy'
 alias up='sudo pacman -Syyu'
 alias search='pacman -Q'
 alias cclean='sudo paccache -rk 1'
+alias dclean='sudo pacman -Sc --noconfirm'
 alias ls='exa -a --grid --icons --color=always' # my preferred listing
 alias la='exa -al --grid --icons --color=always'  # all files and dirs
 alias ll='exa -l --grid --icons --color=always'  # long format
 alias gcl='git clone'
-alias ga='git add -u'
+alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push'
 alias gs='git status'
 alias ..='cd ..'
 alias pd='pwd'
 alias cat='bat --theme ansi'
-alias rf='ranger'
-alias zconf='nvim .zshrc'
-alias bconf='nvim .bashrc'
+alias fm='yazi'
+alias zconf='micro .zshrc'
+alias bconf='micro .bashrc'
 alias battery='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias reboot='systemctl reboot'
 alias poweroff='systemctl poweroff'
@@ -104,12 +106,13 @@ alias srb='source .bashrc'
 alias srz='source .zshrc'
 alias grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias mirrorall='sudo curl -o /etc/pacman.d/mirrorlist https://archlinux.org/mirrorlist/all/'
-alias vim='nvim'
 alias edit="sudoedit"
-alias zrc="source .zshrc"
 alias ctl="hyprctl"
 alias lsi="lsix"
 alias img="img2sixel -w 1248 -h 702"
+alias fonts='sudo fc-cache -fv'
+alias fetch='fastfetch'
+
 
 ##------------------- ZSH HOME DECOR --------------------##
 
