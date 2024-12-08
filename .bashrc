@@ -57,9 +57,9 @@ alias up='sudo pacman -Syyu'
 alias search='pacman -Q'
 alias cclean='sudo paccache -rk 1'
 alias dclean='sudo pacman -Sc --noconfirm'
-alias ls='exa -a --grid --icons --color=always' # my preferred listing
-alias la='exa -al --grid --icons --color=always'  # all files and dirs
-alias ll='exa -l --grid --icons --color=always'  # long format
+alias ls='eza -a --grid --icons --color=always' # my preferred listing
+alias la='eza -al --grid --icons --color=always'  # all files and dirs
+alias ll='eza -l --grid --icons --color=always'  # long format
 alias gcl='git clone'
 alias ga='git add'
 alias gc='git commit -m'
