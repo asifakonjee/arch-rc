@@ -16,11 +16,6 @@ export EDITOR="micro"
 export CDPATH=.:$HOME:$HOME/.config/
 export TERM="konsole"
 
-########
-#ALCI
-########
-#alias evb='sudo systemctl enable --now vboxservice.service'
-
 ##--------------------------------------------- PROMPT -------------------------------------------##
 
 function parse_git_dirty {
@@ -57,9 +52,9 @@ alias up='sudo pacman -Syyu'
 alias search='pacman -Q'
 alias cclean='sudo paccache -rk 1'
 alias dclean='sudo pacman -Sc --noconfirm'
-alias ls='eza -a --grid --icons --color=always' # my preferred listing
-alias la='eza -al --grid --icons --color=always'  # all files and dirs
-alias ll='eza -l --grid --icons --color=always'  # long format
+alias ls='exa -a --grid --icons --color=always' # my preferred listing
+alias la='exa -al --grid --icons --color=always'  # all files and dirs
+alias ll='exa -l --grid --icons --color=always'  # long format
 alias gcl='git clone'
 alias ga='git add'
 alias gc='git commit -m'
@@ -86,6 +81,9 @@ alias lsi="lsix"
 alias img="img2sixel -w 1248 -h 702"
 alias fonts='sudo fc-cache -fv'
 alias fetch='fastfetch'
+alias yta-mp3="yt-dlp --extract-audio --audio-format mp3 "
+alias ytv="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 "
+
 
 ##------------------- BASH HOME DECOR --------------------##
 

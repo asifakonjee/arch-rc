@@ -112,6 +112,9 @@ alias lsi="lsix"
 alias img="img2sixel -w 1248 -h 702"
 alias fonts='sudo fc-cache -fv'
 alias fetch='fastfetch'
+alias yta="yt-dlp --extract-audio --audio-format mp3 "
+alias ytv="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 "
+
 
 
 ##------------------- ZSH HOME DECOR --------------------##
